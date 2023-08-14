@@ -7,8 +7,6 @@
         $user = mysqli_real_escape_string($conn, $_POST['user']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $role = mysqli_real_escape_string($conn, $_POST['role']);
-        
-        
         $sql ="select username from user where username = '{$user}'";
         $result = mysqli_query($conn, $sql) or die ("Query Failed");
         if(mysqli_num_rows($result)>0){
